@@ -1,0 +1,17 @@
+.main
+{
+    position: absolute;
+    width: calc(100% - 158px);
+    top: 40px;
+    left: 128px;
+    height: 91vh;
+    overflow-y: scroll;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active
+{
+    width: calc(100% - 330px);
+    left: 300px;
+}
