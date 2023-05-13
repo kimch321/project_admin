@@ -5,7 +5,7 @@ import SideNav from "./component/SideNav";
 
 function Admin() {
     const [sideOpen, setSideOpen] = useState('');
-    const [activeLi, setActiveLi] = useState(0);
+
 
   return(
     <div>
