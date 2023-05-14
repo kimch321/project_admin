@@ -7,37 +7,7 @@ export default function Home() {
 
   return (
     <div className={`main ${isActive}`}>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
-    <h1>aaa</h1>
+
     </div>
   );
 }

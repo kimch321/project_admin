@@ -13,85 +13,92 @@ export default function SideNav({isActive, setIsActive}) {
     const [activeLi, setActiveLi] = useState(0);
 
     const handleClick = () => {
-        (isActive === '') ?  setIsActive('active') : setIsActive('')
+        (isActive === '') ?  setIsActive('sidebar_active') : setIsActive('')
     };
+
+    // navigation => sidebar_navigation
+    // menuToggle => sidebar_menuToggle
+    // list => sidebar_list
+    // active => sidebar_active
+    // icon => sidebar_icon
+    // text => sidebar_text
 
     return (
     <>
-        <div className={`navigation ${isActive}`}>
-      <div className={`menuToggle`} onClick={handleClick}>
+    <div className={`sidebar_navigation ${isActive}`}>
+      <div className={`sidebar_menuToggle`} onClick={handleClick}>
       </div>
         <ul>
-            <li className={`list ${activeLi === 0 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 0 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(0)}>
                 <Link to="/admin">
-                    <span className={`icon`} style={{'--clr': '#f44336'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#f44336'}}>
                         <MdOutlineDashboard />
                     </span>
-                    <span className={`text`}>HOME</span>
+                    <span className={`sidebar_text`}>HOME</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 1 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 1 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(1)}>
                 <Link to="/admin/myinfo">
-                    <span className={`icon`} style={{'--clr': '#ffa117'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#ffa117'}}>
                         <RiUser5Line />
                     </span>
-                    <span className={`text`}>나의 정보</span>
+                    <span className={`sidebar_text`}>나의 정보</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 2 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 2 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(2)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#0fc70f'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#0fc70f'}}>
                         <BiChalkboard />
                     </span>
-                    <span className={`text`}>공지사항 관리</span>
+                    <span className={`sidebar_text`}>공지사항 관리</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 3 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 3 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(3)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#2196f3'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#2196f3'}}>
                         <FaChalkboardTeacher />
                     </span>
-                    <span className={`text`}>원데이클래스</span>
+                    <span className={`sidebar_text`}>원데이클래스</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 4 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 4 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(4)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#7986cb'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#7986cb'}}>
                        <RiQuestionAnswerLine />
                     </span>
-                    <span className={`text`}>문의 관리</span>
+                    <span className={`sidebar_text`}>문의 관리</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 5 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 5 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(5)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#b145e9'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#b145e9'}}>
                         <IoStarHalf />
                     </span>
-                    <span className={`text`}>리뷰 관리</span>
+                    <span className={`sidebar_text`}>리뷰 관리</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 6 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 6 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(6)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#c5e1a5'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#c5e1a5'}}>
                         <RiFileListLine />
                     </span>
-                    <span className={`text`}>판매 내역</span>
+                    <span className={`sidebar_text`}>판매 내역</span>
                 </Link>
             </li>
-            <li className={`list ${activeLi === 7 ? 'active' : ''}`}
+            <li className={`sidebar_list ${activeLi === 7 ? 'sidebar_active' : ''}`}
                 onClick={() => setActiveLi(7)}>
                 <Link to="#">
-                    <span className={`icon`} style={{'--clr': '#e57373'}}>
+                    <span className={`sidebar_icon`} style={{'--clr': '#e57373'}}>
                         <TbPigMoney />
                     </span>
-                    <span className={`text`}>정산 내역</span>
+                    <span className={`sidebar_text`}>정산 내역</span>
                 </Link>
             </li>
         </ul>

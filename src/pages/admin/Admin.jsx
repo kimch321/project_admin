@@ -6,11 +6,10 @@ import SideNav from "./component/SideNav";
 function Admin() {
     const [sideOpen, setSideOpen] = useState('');
 
-
   return(
     <div>
       <SideNav isActive={sideOpen} setIsActive={setSideOpen}/>
-        <Outlet context={sideOpen} />
+      {/*<Outlet context={sideOpen} />*/}
     </div>
   )
 
