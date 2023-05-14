@@ -6,11 +6,13 @@ import {FaChalkboardTeacher} from "react-icons/fa";
 import {IoStarHalf} from "react-icons/io5";
 import {MdOutlineDashboard} from "react-icons/md";
 import {TbPigMoney} from "react-icons/tb";
-import {Link} from "react-router-dom";
+import {Link, useLocation } from "react-router-dom";
 
 export default function SideNav({isActive, setIsActive}) {
     // 새로 고침시 초기화 되고 만다.
     const [activeLi, setActiveLi] = useState(0);
+    const location = useLocation();
+    console.log(location.pathname)
 
     const handleClick = () => {
         (isActive === '') ?  setIsActive('sidebar_active') : setIsActive('')

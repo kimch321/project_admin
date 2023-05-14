@@ -1,7 +1,7 @@
-.main
+.adminMain
 {
     position: absolute;
-    width: calc(100% - 158px);
+    width: calc(100% - 138px);
     top: 40px;
     left: 128px;
     height: 91vh;
@@ -10,8 +10,16 @@
     transition: 0.5s;
 }
 
-.main.active
+.adminMain.sidebar_active
 {
-    width: calc(100% - 330px);
+    width: calc(100% - 308px);
     left: 300px;
+}
+
+.adminBody
+{
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    height: 100px;
 }
