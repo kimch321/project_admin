@@ -12,7 +12,7 @@ export default function SideNav({isActive, setIsActive}) {
     // 새로 고침시 초기화 되고 만다.
     const [activeLi, setActiveLi] = useState(0);
     const location = useLocation();
-    console.log(location.pathname)
+    let currUrl = location.pathname;
 
     const handleClick = () => {
         (isActive === '') ?  setIsActive('sidebar_active') : setIsActive('')
@@ -31,8 +31,7 @@ export default function SideNav({isActive, setIsActive}) {
       <div className={`sidebar_menuToggle`} onClick={handleClick}>
       </div>
         <ul>
-            <li className={`sidebar_list ${activeLi === 0 ? 'sidebar_active' : ''}`}
-                onClick={() => setActiveLi(0)}>
+            <li className={`sidebar_list ${currUrl === '/admin' ? 'sidebar_active' : ''}`}>
                 <Link to="/admin">
                     <span className={`sidebar_icon`} style={{'--clr': '#f44336'}}>
                         <MdOutlineDashboard />
@@ -40,8 +39,7 @@ export default function SideNav({isActive, setIsActive}) {
                     <span className={`sidebar_text`}>HOME</span>
                 </Link>
             </li>
-            <li className={`sidebar_list ${activeLi === 1 ? 'sidebar_active' : ''}`}
-                onClick={() => setActiveLi(1)}>
+            <li className={`sidebar_list ${currUrl === '/admin/myinfo' ? 'sidebar_active' : ''}`}>
                 <Link to="/admin/myinfo">
                     <span className={`sidebar_icon`} style={{'--clr': '#ffa117'}}>
                         <RiUser5Line />
