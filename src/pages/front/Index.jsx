@@ -1,9 +1,12 @@
 import React from 'react';
+import {Outlet} from "react-router-dom";
 
 export default function Index() {
   return (
-    <div>
-      <h1>프론트페이지</h1>
-    </div>
+    <>
+      <h1>header자리</h1>
+      <Outlet />
+      <p>footer자리</p>
+    </>
   );
 }
