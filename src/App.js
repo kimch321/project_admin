@@ -10,6 +10,11 @@ import Login from "./pages/front/pages/Login";
 import Modify from "./pages/myinfo/pages/Modify";
 import ClassMain from "./pages/front/pages/ClassMain";
 import ViewClass from "./pages/front/pages/ViewClass";
+import AddClass from "./pages/myinfo/pages/AddClass";
+import Modal from "./pages/myinfo/pages/Modal";
+import ListClass from "./pages/myinfo/pages/ListClass";
+
+
 
 const router = createBrowserRouter([
   {
@@ -34,7 +39,10 @@ const router = createBrowserRouter([
     path:'/myinfo',
     element:<UserInfo />,
     children: [
-      {path: "modify", element: <Modify />}
+      {path: "modify", element: <Modify />},
+      {path: "listclass", element: <ListClass />},
+      {path: "modal", element: <Modal />},
+      {path: "addclass", element: <AddClass />},
     ]
   }
 ]);
